@@ -35,7 +35,18 @@
 // export default App
 
 
-import BirthdayInvite from './BirthdayInvite.jsx';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import BirthdayInvite from "./BirthdayInvite.jsx";
+import EventPhotos from "./components/EventPhotos";
+
 export default function App() {
-  return <BirthdayInvite />;
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<BirthdayInvite />} />
+        <Route path="/photos" element={<EventPhotos />} />
+      </Routes>
+    </Router>
+  );
 }
+

@@ -10,7 +10,8 @@ import EventPhotos from './components/EventPhotos';
 import { useFormattedDate } from './hooks/useFormattedDate';
 import { useCountdown } from './hooks/useCountdown';
 import { downloadICS } from './utils/calendar';
-
+import { Button } from "@mui/material";
+import { Link } from "react-router-dom";
 
 import photo1 from './assets/IMG-20250824-WA0020.jpg';
 import photo2 from './assets/IMG-20250824-WA0032.jpg';
@@ -78,24 +79,33 @@ const BirthdayInvite: React.FC = () => {
 
         {/* Photo Carousel Section */}
         <Container maxWidth="lg" sx={{ py: 4 }}>
-          <PhotoCarousel images={PHOTOS} />
-        </Container>
+        <PhotoCarousel images={PHOTOS} />
+  {/* View Uploaded Photos Button */}
+  <Box sx={{ textAlign: "center", mt: 3 }}>
+    <Button
+      variant="contained"
+      color="primary"
+      component={Link}
+      to="/photos"
+      sx={{ borderRadius: "12px", px: 4, py: 1.5, fontSize: "1rem" }}
+    >
+      View Uploaded Photos
+    </Button>
+  </Box>
+</Container>
 
-        {/* Details and RSVP Section */}
-        <Container maxWidth="lg" sx={{ py: 4 }}>
-          <Stack
-            direction={{ xs: 'column', md: 'row' }}
-            spacing={4}
-            alignItems="stretch"
-          >
-            <Box sx={{ flex: 3 }}>
-              <EventDetails
-                contactPhone={EVENT.contactPhone}
-              />
-            </Box>
-            
-          </Stack>
-        </Container>
+{/* Details Section */}
+<Container maxWidth="lg" sx={{ py: 4 }}>
+  <Stack
+    direction={{ xs: 'column', md: 'row' }}
+    spacing={4}
+    alignItems="stretch"
+  >
+    <Box sx={{ flex: 3 }}>
+      <EventDetails contactPhone={EVENT.contactPhone} />
+    </Box>
+  </Stack>
+</Container>
 
         {/* Footer */}
         <Box sx={{ py: 4, textAlign: 'center' }}>
