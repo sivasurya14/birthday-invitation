@@ -7,6 +7,7 @@ import {
   CardGiftcardOutlined
 } from '@mui/icons-material';
 import CountdownTimer from './CountdownTimer';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 interface EventHeaderProps {
   honoree: string;
@@ -80,7 +81,7 @@ const EventHeader: React.FC<EventHeaderProps> = ({
                 <CardContent sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
                   <CalendarMonthOutlined color="primary" />
                   <Box>
-                    <Typography variant="body1" fontWeight="medium">
+                    <Typography variant="body1" fontWeight="medium" >
                       {day}, {date}
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
@@ -112,9 +113,22 @@ const EventHeader: React.FC<EventHeaderProps> = ({
                       <Typography variant="body1" fontWeight="medium">
                         {venueName}
                       </Typography>
-                      <Typography variant="body2" color="text.secondary">
-                        {address}
-                      </Typography>
+                     <Box display="flex" alignItems="center" gap={1} mt={0.5}>
+  <Typography variant="body2" color="text.secondary">
+    {address}
+  </Typography>
+  <Button
+    variant="outlined"
+    size="small"
+    href={`https://maps.google.com?q=${encodeURIComponent(address)}`}
+    target="_blank"
+    rel="noopener noreferrer"
+    sx={{ textTransform: 'none', borderRadius: 2 }}
+  >
+    Open in Maps
+  </Button>
+</Box>
+
                     </Box>
                   </Link>
                 </CardContent>

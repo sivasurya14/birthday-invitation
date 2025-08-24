@@ -31,7 +31,7 @@ const TimeChip: React.FC<{ label: string; value: number }> = ({ label, value }) 
       sx={{
         fontSize: { xs: '1.5rem', md: '2rem' },
         fontWeight: 600,
-        color: 'white',
+        color: 'black',
         lineHeight: 1
       }}
     >
@@ -42,7 +42,7 @@ const TimeChip: React.FC<{ label: string; value: number }> = ({ label, value }) 
       sx={{
         textTransform: 'uppercase',
         opacity: 0.8,
-        color: 'white',
+        color: 'black',
         fontSize: '0.75rem'
       }}
     >

@@ -6,7 +6,7 @@ import theme from './theme';
 import EventHeader from './components/EventHeader';
 import PhotoCarousel from './components/PhotoCarousel';
 import EventDetails from './components/EventDetails';
-import RSVPForm from './components/RSVPForm';
+import EventPhotos from './components/EventPhotos';
 import { useFormattedDate } from './hooks/useFormattedDate';
 import { useCountdown } from './hooks/useCountdown';
 import { downloadICS } from './utils/calendar';
@@ -27,7 +27,7 @@ const EVENT = {
   tagline: "Cake • Food • Good Vibes",
   dateISO: "2025-08-27T10:00:00+05:30",
   venueName: "Magizh's Home",
-  address: "Muthampalayam,Villupuram",
+  address: "Muthampalayam,Villupuram  Get Direction",
   mapLink: "https://maps.app.goo.gl/nGoQwVDukrLY9Tgg8",
   contactPhone: "9080751263"
 };
@@ -93,12 +93,9 @@ const BirthdayInvite: React.FC = () => {
                 contactPhone={EVENT.contactPhone}
               />
             </Box>
-            {/* <Box sx={{ flex: 2 }}>
-              <RSVPForm
-                eventTitle={EVENT.honoree}
-                contactEmail={EVENT.contactEmail}
-              />
-            </Box> */}
+            <Box sx={{ flex: 2 }}>
+                <EventPhotos /> {/* Replaced RSVPForm */}
+            </Box>
           </Stack>
         </Container>
 

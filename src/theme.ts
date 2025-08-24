@@ -6,7 +6,7 @@ const theme = createTheme({
       main: '#ec4899', // pink-500
       light: '#f9a8d4', // pink-300
       dark: '#be185d', // pink-700
-      contrastText: '#ffffff'
+      contrastText: '#0a0909ff'
     },
     secondary: {
       main: '#f59e0b', // amber-500
