@@ -25,7 +25,7 @@ import photo7 from './assets/IMG-20250824-WA0221.jpg';
 const EVENT = {
   honoree: "Magizh's 1st Birthday",
   tagline: "Cake • Food • Good Vibes",
-  dateISO: "2025-08-27T10:00:00+05:30",
+  dateISO: "2025-08-27T18:00:00+05:30",
   venueName: "Magizh's Home",
   address: "Muthampalayam,Villupuram  Get Direction",
   mapLink: "https://maps.app.goo.gl/nGoQwVDukrLY9Tgg8",
@@ -93,9 +93,7 @@ const BirthdayInvite: React.FC = () => {
                 contactPhone={EVENT.contactPhone}
               />
             </Box>
-            <Box sx={{ flex: 2 }}>
-                <EventPhotos /> {/* Replaced RSVPForm */}
-            </Box>
+            
           </Stack>
         </Container>
 
